@@ -1,0 +1,185 @@
+# Build settings
+remote_theme: daattali/beautiful-jekyll@102b97fc7a77d175d6ddf9aad6b7d135ad9aa191
+
+############################
+# --- Required options --- #
+############################
+
+# Title of website
+title: Tim Underwood
+
+# Name to show in the footer
+#author: Tim Underwood
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+navbar-links:
+  #About Me: "about"
+  Experience: "experience"
+  Blog: "blog"
+
+################
+# --- Logo --- #
+################
+
+# Image to show in the navigation bar - works best with a square image
+# Remove this parameter if you don't want an image in the navbar
+#avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/profile.jpg"
+
+# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
+round-avatar: true
+
+# If you want to have an image logo in the top-left corner instead of having the title of the website,
+# then specify the following parameter
+#title-img: /path/to/image
+
+
+#####################################
+# --- Footer social media links --- #
+#####################################
+social-network-links:
+  email: "timunderwood@gmail.com"
+  github: tpunder
+  linkedin: tpunder
+  twitter: tpunder
+
+###########################
+# --- General options --- #
+###########################
+
+# Select which social network share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+
+# How to display the link to your website in the footer
+# Remove this if you don't want a link in the footer
+#url-pretty: "tpunder.com"
+
+# Add the website title to the title of every page
+title-on-all-pages: true
+
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
+
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
+
+# Add a search button to the navbar
+post_search: false
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+edit_page_button: false
+
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
+
+# The keywords to associate with your website, for SEO purposes
+#keywords: "software development, cloud architecture, apache solr"
+
+#####################################
+# --- Colors / background image --- #
+#####################################
+
+# Personalize the colors in your website. Color values can be any valid CSS color
+
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+# Alternatively, the navbar, footer, and page background can be set to an image
+# instead of colour
+
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
+
+# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
+#mobile-theme-col: "#0085A1"
+
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
+#gtag: "G-XXXXXXXXXX"
+
+# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
+#cloudflare_analytics: ""
+
+################
+# --- Misc --- #
+################
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+##########################
+# --- Jekyll options --- #
+##########################
+
+url: "https://www.tpunder.com"
+
+# Output options (more information on Jekyll's site)
+timezone: "America/Los_Angeles"
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+
+# Exclude these files from production site
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Makefile
+  - README.md
+  - _site/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
